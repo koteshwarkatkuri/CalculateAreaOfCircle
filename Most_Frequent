@@ -1,0 +1,12 @@
+def most_frequent(string):
+    freq = {}
+    for i in string:
+        if i in freq:
+            freq[i] += 1
+        else:
+            freq[i] = 1
+    sorted_freq = sorted(freq.items(), key=lambda x: x[1], reverse=True)
+    for i in sorted_freq:
+        print(i[0], '=', i[1])
+
+most_frequent('Mississippi')
